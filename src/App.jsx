@@ -19,7 +19,8 @@ import twitterIcon from "/assets/twitter.png";
 
 function App() {
   const work = useRef(null);
-  const about = useRef(null)
+  const about = useRef(null);
+  const contact = useRef(null);
 
   const handleClick = (ref) => {
     ref.current?.scrollIntoView({behavior: 'smooth'});
@@ -30,9 +31,9 @@ function App() {
       <nav className='navbar'>
         <h1 className='logo'>Pedro Lucena</h1>
         <div className='navbar__options'>
-          <button className='navbar__button'>HOME</button>
           <button className='navbar__button' onClick={() => handleClick(work)}>WORK</button>
           <button className='navbar__button' onClick={() => handleClick(about)}>ABOUT</button>
+          <button className='navbar__button' onClick={() => handleClick(contact)}>CONTACT</button>
         </div>
       </nav>
 
@@ -171,7 +172,7 @@ function App() {
         </section>
       </main>
 
-      <footer className='footer'>
+      <footer className='footer' ref={contact}>
         <h1 className='greeting'>Get <span className='emphasis'>in touch.</span></h1>
         
         <section className='contact__options'>
