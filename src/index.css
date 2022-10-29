@@ -1,0 +1,31 @@
+#root {
+  width: 100%;
+
+  font-family: "Work Sans", "Chakra Petch", sans-serif;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+
+  background-color: #000000;
+  background-image: linear-gradient(
+    180deg,
+    #010208 16.39%,
+    #010206 20.51%,
+    #040008 24.79%,
+    #010101 30.46%,
+    #010101 34.11%,
+    #010101 36.21%,
+    #010101 100%
+  );
+}
