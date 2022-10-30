@@ -72,6 +72,30 @@
   height: 40px;
 }
 
+.bounce {
+  animation-delay: 250ms;
+  animation-duration: 2s;
+  animation-name: bounce;
+}
+
+@keyframes bounce {
+  from {
+    bottom: 80px;
+  }
+
+  50% {
+    bottom: 20px;
+  }
+
+  75% {
+    bottom: 50px;
+  }
+
+  to {
+    bottom: 20px;
+  }
+}
+
 .navbar__options {
   display: flex;
 }
@@ -238,6 +262,8 @@
   margin-right: 8px;
 
   color: #e3e4e6;
+
+  transition: all 0.25s ease-in-out;
 }
 
 .project__link:focus,
@@ -333,6 +359,12 @@
 .contact__option {
   width: 32px;
   height: 32px;
+
+  transition: all 0.25s ease-in-out;
+}
+
+.contact__option:hover {
+  transform: scale(1.25);
 }
 
 @media (min-width: 620px) and (max-width: 1024px) {

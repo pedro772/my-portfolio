@@ -44,7 +44,7 @@ function App() {
             <span className='emphasis'> Front End Developer </span>
             specialising in <span className='emphasis'>React</span>
           </h1>
-          <img className='home__icon' src={chevronDownIcon} onClick={() => handleClick(work)} />
+          <img className='home__icon bounce' src={chevronDownIcon} onClick={() => handleClick(work)} />
         </section>
 
         <section className='work' ref={work}>
