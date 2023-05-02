@@ -6,6 +6,7 @@ import unexpandedArrow from "/assets/chevron-right.svg";
 import expandedArrow from "/assets/arrow-right.svg";
 
 import myTravelDestinationsPreview from "/assets/my-travel-destinations.png";
+import audioPhilePreview from '/assets/audiophile.png';
 import whereInTheWorld from "/assets/where-in-the-world.png";
 import challengeSmartFit from "/assets/challenge-smartfit.png";
 import reactFacts from "/assets/react-facts.png";
@@ -50,6 +51,31 @@ function App() {
         <section className='work' ref={work}>
           <h2 className='works__title'>Selected <span className='emphasis'>Works</span></h2>
             <section className='project'>
+              <a className='project__card' href='https://github.com/pedro772/audiophile-ecommerce' target="blank">
+                <img className='project__image' src={audioPhilePreview} />
+              </a>
+              <div className='project__info'>
+                <h5 className='project__title'>AUDIOPHILE E-COMMERCE</h5>
+                <p className='description'>
+                  A Multi-page <span className='emphasis'>E-Commerce website</span> built with 
+                  <span className='emphasis'> Next.js</span>,
+                  <span className='emphasis'> React</span>,
+                  <span className='emphasis'> SASS</span>, 
+                  <span className='emphasis'> Typescript</span> and the 
+                  <span className='emphasis'> Context API </span>
+                </p>
+                <label className='project__label'>Web Application</label>
+                <div>
+                  <a href='https://github.com/pedro772/audiophile-ecommerce' target="blank"  className='project__link'>
+                    View Work
+                    <img className='link__icon not-expanded' src={unexpandedArrow} />
+                    <img className='link__icon expanded' src={expandedArrow} />
+                  </a>
+                </div>
+              </div>
+            </section>
+
+            <section className='project'>
               <a className='project__card' href='https://github.com/pedro772/countries' target="blank">
                 <img className='project__image' src={whereInTheWorld} />
               </a>
@@ -77,6 +103,29 @@ function App() {
             </section>
 
             <section className='project'>
+              <a className='project__card' href='https://github.com/pedro772/challenge-smartfit' target="blank">
+                <img className='project__image' src={challengeSmartFit} />
+              </a>
+              <div className='project__info'>
+                <h5 className='project__title'>SMARTFIT CHALLENGE</h5>
+                <p className='description'>
+                  SmartFit Gym Finder challenge built using
+                  <span className='emphasis'> React</span>,
+                  <span className='emphasis'> TypeScript</span> and
+                  <span className='emphasis'> TailwindCSS</span>.
+                </p>
+                <label className='project__label'>Web Application</label>
+                <div>
+                  <a href='https://github.com/pedro772/challenge-smartfit' target="blank" className='project__link'>
+                    View Work
+                    <img className='link__icon not-expanded' src={unexpandedArrow} />
+                    <img className='link__icon expanded' src={expandedArrow}/>
+                  </a>
+                </div>
+              </div>
+            </section>
+
+            <section className='project'>
               <a className='project__card' href='https://github.com/pedro772/my-travel-destinations' target="blank">
                 <img className='project__image' src={myTravelDestinationsPreview} />
               </a>
@@ -97,50 +146,6 @@ function App() {
                 </div>
               </div>
             </section>
-          
-          <section className='project'>
-            <a className='project__card' href='https://github.com/pedro772/challenge-smartfit' target="blank">
-              <img className='project__image' src={challengeSmartFit} />
-            </a>
-            <div className='project__info'>
-              <h5 className='project__title'>SMARTFIT CHALLENGE</h5>
-              <p className='description'>
-                SmartFit Gym Finder challenge built using
-                <span className='emphasis'> React</span>,
-                <span className='emphasis'> TypeScript</span> and
-                <span className='emphasis'> TailwindCSS</span>.
-              </p>
-              <label className='project__label'>Web Application</label>
-              <div>
-                <a href='https://github.com/pedro772/challenge-smartfit' target="blank" className='project__link'>
-                  View Work
-                  <img className='link__icon not-expanded' src={unexpandedArrow} />
-                  <img className='link__icon expanded' src={expandedArrow}/>
-                </a>
-              </div>
-            </div>
-          </section>
-
-          <section className='project'>
-            <a className='project__card' href='https://github.com/pedro772/react-facts' target="blank">
-              <img className='project__image' src={reactFacts} />
-            </a>
-            <div className='project__info'>
-              <h5 className='project__title'>REACT FACTS</h5>
-              <p className='description'>
-                My <span className='emphasis'>first React-made project </span>, 
-                a simple landing page with some facts about react made to display a light/dark mode switch.
-              </p>
-              <label className='project__label'>Landing Page</label>
-              <div>
-                <a href='https://github.com/pedro772/react-facts' target="blank" className='project__link'>
-                  View Work
-                  <img className='link__icon not-expanded' src={unexpandedArrow} />
-                  <img className='link__icon expanded' src={expandedArrow}/>
-                </a>
-              </div>
-            </div>
-          </section>
         </section>
 
         <section className='about' ref={about}>
