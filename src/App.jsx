@@ -5,11 +5,6 @@ import chevronDownIcon from "/assets/chevron-down.svg";
 import unexpandedArrow from "/assets/chevron-right.svg";
 import expandedArrow from "/assets/arrow-right.svg";
 
-import myTravelDestinationsPreview from "/assets/my-travel-destinations.png";
-import audioPhilePreview from '/assets/audiophile.png';
-import whereInTheWorld from "/assets/where-in-the-world.png";
-import challengeSmartFit from "/assets/challenge-smartfit.png";
-import reactFacts from "/assets/react-facts.png";
 import basketballPic from "/assets/basketball.jpg";
 import formulaOnePic from "/assets/formula-one.jpg";
 import gamingPic from "/assets/gaming.jpg";
@@ -51,8 +46,7 @@ function App() {
         <section className='work' ref={work}>
           <h2 className='works__title'>Selected <span className='emphasis'>Works</span></h2>
             <section className='project'>
-              <a className='project__card' href='https://github.com/pedro772/audiophile-ecommerce' target="blank">
-                <img className='project__image' src={audioPhilePreview} />
+              <a className='project__card audiophile' href='https://github.com/pedro772/audiophile-ecommerce' target="blank">
               </a>
               <div className='project__info'>
                 <h5 className='project__title'>AUDIOPHILE E-COMMERCE</h5>
@@ -76,8 +70,7 @@ function App() {
             </section>
 
             <section className='project'>
-              <a className='project__card' href='https://github.com/pedro772/countries' target="blank">
-                <img className='project__image' src={whereInTheWorld} />
+              <a className='project__card countries' href='https://github.com/pedro772/countries' target="blank">
               </a>
               <div className='project__info'>
                 <h5 className='project__title'>WHERE IN THE WORLD?</h5>
@@ -103,8 +96,7 @@ function App() {
             </section>
 
             <section className='project'>
-              <a className='project__card' href='https://github.com/pedro772/challenge-smartfit' target="blank">
-                <img className='project__image' src={challengeSmartFit} />
+              <a className='project__card smartfit' href='https://github.com/pedro772/challenge-smartfit' target="blank">
               </a>
               <div className='project__info'>
                 <h5 className='project__title'>SMARTFIT CHALLENGE</h5>
@@ -126,8 +118,7 @@ function App() {
             </section>
 
             <section className='project'>
-              <a className='project__card' href='https://github.com/pedro772/my-travel-destinations' target="blank">
-                <img className='project__image' src={myTravelDestinationsPreview} />
+              <a className='project__card travel' href='https://github.com/pedro772/my-travel-destinations' target="blank">
               </a>
               <div className='project__info'>
                 <h5 className='project__title'>MY TRAVEL DESTINATIONS</h5>
