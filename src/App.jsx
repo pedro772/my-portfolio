@@ -27,8 +27,6 @@ function App() {
       rootMargin: '0px',
       threshold: [0.1, 0.9],
     });
-
-    console.log(work, about, contact)
   
     if(home.current) {
       observer.observe(home.current);
