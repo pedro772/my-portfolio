@@ -7,6 +7,13 @@
 }
 
 .navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: calc(100% - 16vw);
+
+  padding-inline: 8vw;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -23,6 +30,8 @@
     #010101 36.21%,
     #010101 100%
   );
+
+  z-index: 5;
 }
 
 .logo {
@@ -49,7 +58,7 @@
   justify-content: center;
 
   height: 100vh;
-  margin: -72px 12vw 0;
+  margin: 0 12vw;
 }
 
 .greeting {
@@ -117,7 +126,6 @@
   padding: 10px;
 }
 
-.navbar__button:focus,
 .navbar__button:hover {
   background-color: #bc3cd8;
   background-image: linear-gradient(99.05deg, #bc3cd8 0.07%, #c54b8c 106.32%);
@@ -129,7 +137,6 @@
   -moz-text-fill-color: transparent;
 }
 
-.navbar__button:focus::before,
 .navbar__button:hover::before {
   content: "";
   width: 9px;
@@ -144,6 +151,28 @@
 .navbar__option {
   display: flex;
   flex-direction: column;
+}
+
+.active {
+  background-color: #bc3cd8;
+  background-image: linear-gradient(99.05deg, #bc3cd8 0.07%, #c54b8c 106.32%);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.active::before {
+  content: "";
+  width: 9px;
+  position: absolute;
+  margin: auto;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-bottom: 2.5px solid #e3e4e6;
 }
 
 .works__title {

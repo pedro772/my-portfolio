@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 import './App.css';
 import chevronDownIcon from "/assets/chevron-down.svg";
@@ -14,12 +14,48 @@ import linkedinIcon from "/assets/linkedin.png";
 import twitterIcon from "/assets/twitter.png";
 
 function App() {
+  const [activeSection, setActiveSection] = useState(null);
+
+  const home = useRef(null);
   const work = useRef(null);
   const about = useRef(null);
   const contact = useRef(null);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(handleIntersection, {
+      root: null, // Use the viewport as the root
+      rootMargin: '0px',
+      threshold: [0.1, 0.9],
+    });
+
+    console.log(work, about, contact)
+  
+    if(home.current) {
+      observer.observe(home.current);
+    }
+    if (work.current) {
+      observer.observe(work.current);
+    }
+    if (about.current) {
+      observer.observe(about.current);
+    }
+    if (contact.current) {
+      observer.observe(contact.current);
+    }
+  
+    return () => observer.disconnect();
+  }, []);
+
   const handleClick = (ref) => {
     ref.current?.scrollIntoView({behavior: 'smooth'});
+  };
+
+  const handleIntersection = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setActiveSection(entry.target.id);
+      }
+    });
   };
 
   return (
@@ -27,14 +63,14 @@ function App() {
       <nav className='navbar'>
         <h1 className='logo'>Pedro Lucena</h1>
         <div className='navbar__options'>
-          <button className='navbar__button' onClick={() => handleClick(work)}>WORK</button>
-          <button className='navbar__button' onClick={() => handleClick(about)}>ABOUT</button>
-          <button className='navbar__button' onClick={() => handleClick(contact)}>CONTACT</button>
+          <button className={`navbar__button ${activeSection === 'work' ? 'active' : ''}`} onClick={() => handleClick(work)}>WORK</button>
+          <button className={`navbar__button ${activeSection === 'about' ? 'active' : ''}`} onClick={() => handleClick(about)}>ABOUT</button>
+          <button className={`navbar__button ${activeSection === 'contact' ? 'active' : ''}`} onClick={() => handleClick(contact)}>CONTACT</button>
         </div>
       </nav>
 
       <main className='main'>
-        <section className='home'>
+        <section className='home' ref={home} id='home'>
           <h1 className='greeting'>
             Hello, I'm Pedro,
             <span className='emphasis'> Front End Developer </span>
@@ -43,7 +79,7 @@ function App() {
           <img className='home__icon bounce' src={chevronDownIcon} onClick={() => handleClick(work)} />
         </section>
 
-        <section className='work' ref={work}>
+        <section className='work' ref={work} id='work'>
           <h2 className='works__title'>Selected <span className='emphasis'>Works</span></h2>
             <section className='project'>
               <a className='project__card audiophile' href='https://github.com/pedro772/audiophile-ecommerce' target="blank">
@@ -139,7 +175,7 @@ function App() {
             </section>
         </section>
 
-        <section className='about' ref={about}>
+        <section className='about' ref={about} id='about'>
           <div className='about__container'>
             <div className='about__info'>
               <h4 className='about__title'>A BIT ABOUT ME</h4>
@@ -168,7 +204,7 @@ function App() {
         </section>
       </main>
 
-      <footer className='footer' ref={contact}>
+      <footer className='footer' ref={contact} id='contact'>
         <h1 className='greeting'>Get <span className='emphasis'>in touch.</span></h1>
         
         <section className='contact__options'>
