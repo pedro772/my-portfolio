@@ -71,8 +71,8 @@ function App() {
         <section className='home' ref={home} id='home'>
           <h1 className='greeting'>
             Hello, I'm Pedro,
-            <span className='emphasis'> Front End Developer </span>
-            specialising in <span className='emphasis'>React</span>
+            <span className='emphasis'> Full Stack Developer </span>
+            specialising in <span className='emphasis'>React and Spring Boot</span>
           </h1>
           <img className='home__icon bounce' src={chevronDownIcon} onClick={() => handleClick(work)} />
         </section>
