@@ -179,7 +179,7 @@ function App() {
               <h4 className='about__title'>A BIT ABOUT ME</h4>
               <p className='description'>
               <span className='emphasis'> </span>
-                I am a self-taught Front End developer who loves
+                I am a self-taught Full Stack Developer who loves
                 <span className='emphasis'> learning new things and working on random challenges. </span>
                 I'm also
                 <span className='emphasis'> passionate about music</span>,
